@@ -2,7 +2,7 @@
 //  AlFButton.swift
 //  Album Finder
 //
-//  Created by Weixin Liang on 1/17/23.
+//  Created by Emily Liang on 1/17/23.
 //
 
 import UIKit

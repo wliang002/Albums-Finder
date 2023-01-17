@@ -15,6 +15,7 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     var searchBar = UISearchBar()
     var users = [User]()
     var filteredUsers = [User]()
+    var userId: Int!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +26,19 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
         configerCallToActionButton()
     }
     
-    @objc func navToAlbumListVC() {}
+    @objc func navToAlbumListVC() {
+        guard let id = userId else {
+                // handle the case when the user's id is nil
+                let alert = UIAlertController(title: "Error", message: "No user selected", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                present(alert, animated: true, completion: nil)
+                return
+            }
+            let albumsViewController = AlbumsViewController()
+            albumsViewController.userId = id
+            print(id)
+            navigationController?.pushViewController(albumsViewController, animated: true)
+    }
     
     // set constraints for a header image
     func configureHeaderImageView() {
@@ -79,7 +92,6 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     // set constraints for the find button
     func configerCallToActionButton() {
         view.addSubview(findActionButton)
-        // add a target
         findActionButton.addTarget(self, action: #selector(navToAlbumListVC), for: .touchUpInside)
         NSLayoutConstraint.activate([
             findActionButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -50),
@@ -122,9 +134,8 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
         }
         @objc(tableView:didSelectRowAtIndexPath:) func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
             let selectedUser = filteredUsers[indexPath.row]
-            let userID = selectedUser.id
-            print("Selected user ID: \(userID)")
-            // You can use userID variable here as per your requirement
+            userId = selectedUser.id
+
             searchBar.text = selectedUser.username
             searchBar.endEditing(true)
             tableView.isHidden = true
