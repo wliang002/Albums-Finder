@@ -31,8 +31,7 @@ git clone https://github.com/wliang002/Album-Finder.git
 * To view your saved favorite albums, tap the "Favorites" tab
 
 ### Screens
-![image name](img/search.png "Seach Screen"){:height="50%" width="50%"}
-
-![image name](img/searchRes.png "Seach Screen"){:height="50%" width="50%"}
-
-![image name](img/albums.png "Albums Screen"){:height="50%" width="50%"}
+<p align="center">
+<img src= "img/search.png" width="250"> <br/><br />
+<img src= "img/searchRes.png" width="250"> <br /><br />
+<img src= "img/albums.png" width="250"> <br /> <br />
