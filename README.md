@@ -24,7 +24,7 @@ git clone https://github.com/wliang002/Album-Finder.git
 
 
 ### Usage
-* On the home screen, enter a user ID and tap "Search"
+* On the home screen, enter a username tap "Search"
 * A list of albums associated with that user ID will be displayed
 * Tap on an album to view more details
 * Tap the "Favorite" button to save the album to your favorites list
