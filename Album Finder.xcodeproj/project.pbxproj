@@ -18,6 +18,7 @@
 		9C6A98872976B809002E3D06 /* AlbumsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6A98862976B809002E3D06 /* AlbumsViewController.swift */; };
 		9C6A988929772E17002E3D06 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6A988829772E17002E3D06 /* Album.swift */; };
 		9C6A988B29773504002E3D06 /* AlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6A988A29773504002E3D06 /* AlbumCell.swift */; };
+		9C6A988D297778F8002E3D06 /* AlbumCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6A988C297778F8002E3D06 /* AlbumCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		9C6A98862976B809002E3D06 /* AlbumsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsViewController.swift; sourceTree = "<group>"; };
 		9C6A988829772E17002E3D06 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
 		9C6A988A29773504002E3D06 /* AlbumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCell.swift; sourceTree = "<group>"; };
+		9C6A988C297778F8002E3D06 /* AlbumCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +49,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9C138E252978A23400D4313A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9C6A988829772E17002E3D06 /* Album.swift */,
+				9C6A98822976A665002E3D06 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		9C138E272978A28800D4313A /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				9C6A98802976A0BF002E3D06 /* SearchViewController.swift */,
+				9C6A98862976B809002E3D06 /* AlbumsViewController.swift */,
+				9C6A987E2976A050002E3D06 /* FavoritesViewController.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		9C138E282978A2A600D4313A /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				9C6A986A29769D40002E3D06 /* AppDelegate.swift */,
+				9C6A986C29769D40002E3D06 /* SceneDelegate.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		9C138E292978A2C200D4313A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				9C6A988A29773504002E3D06 /* AlbumCell.swift */,
+				9C6A988C297778F8002E3D06 /* AlbumCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		9C138E2A2978A2E000D4313A /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				9C6A98842976A750002E3D06 /* AlFButton.swift */,
+			);
+			path = Buttons;
+			sourceTree = "<group>";
+		};
 		9C6A985E29769D40002E3D06 = {
 			isa = PBXGroup;
 			children = (
@@ -66,15 +113,11 @@
 		9C6A986929769D40002E3D06 /* Album Finder */ = {
 			isa = PBXGroup;
 			children = (
-				9C6A986A29769D40002E3D06 /* AppDelegate.swift */,
-				9C6A986C29769D40002E3D06 /* SceneDelegate.swift */,
-				9C6A98802976A0BF002E3D06 /* SearchViewController.swift */,
-				9C6A98862976B809002E3D06 /* AlbumsViewController.swift */,
-				9C6A988A29773504002E3D06 /* AlbumCell.swift */,
-				9C6A988829772E17002E3D06 /* Album.swift */,
-				9C6A98842976A750002E3D06 /* AlFButton.swift */,
-				9C6A98822976A665002E3D06 /* User.swift */,
-				9C6A987E2976A050002E3D06 /* FavoritesViewController.swift */,
+				9C138E252978A23400D4313A /* Model */,
+				9C138E282978A2A600D4313A /* Support */,
+				9C138E2A2978A2E000D4313A /* Buttons */,
+				9C138E292978A2C200D4313A /* Cells */,
+				9C138E272978A28800D4313A /* Screens */,
 				9C6A987329769D41002E3D06 /* Assets.xcassets */,
 				9C6A987529769D41002E3D06 /* LaunchScreen.storyboard */,
 				9C6A987829769D41002E3D06 /* Info.plist */,
@@ -156,6 +199,7 @@
 				9C6A98812976A0BF002E3D06 /* SearchViewController.swift in Sources */,
 				9C6A986B29769D40002E3D06 /* AppDelegate.swift in Sources */,
 				9C6A987F2976A050002E3D06 /* FavoritesViewController.swift in Sources */,
+				9C6A988D297778F8002E3D06 /* AlbumCollectionViewCell.swift in Sources */,
 				9C6A98852976A750002E3D06 /* AlFButton.swift in Sources */,
 				9C6A98832976A665002E3D06 /* User.swift in Sources */,
 				9C6A986D29769D40002E3D06 /* SceneDelegate.swift in Sources */,

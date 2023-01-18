@@ -92,6 +92,7 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
     // set constraints for the find button
     func configerCallToActionButton() {
         view.addSubview(findActionButton)
+        // add a target
         findActionButton.addTarget(self, action: #selector(navToAlbumListVC), for: .touchUpInside)
         NSLayoutConstraint.activate([
             findActionButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -50),
@@ -135,7 +136,8 @@ class SearchViewController: UIViewController, UITableViewDataSource, UITableView
         @objc(tableView:didSelectRowAtIndexPath:) func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
             let selectedUser = filteredUsers[indexPath.row]
             userId = selectedUser.id
-
+            print("Selected user ID: \(String(describing: userId))")
+            // You can use userID variable here as per your requirement
             searchBar.text = selectedUser.username
             searchBar.endEditing(true)
             tableView.isHidden = true

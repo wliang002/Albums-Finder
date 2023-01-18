@@ -51,4 +51,3 @@ class AlbumCell: UITableViewCell {
         onFavoriteTapped?()
     }
 }
-

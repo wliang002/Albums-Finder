@@ -2,7 +2,7 @@
 //  AlFButton.swift
 //  Album Finder
 //
-//  Created by Emily Liang on 1/17/23.
+//  Created by Weixin Liang on 1/17/23.
 //
 
 import UIKit
@@ -12,7 +12,6 @@ class AlFButton: UIButton {
     override init(frame: CGRect) {
         super.init(frame: frame)
         configure()
-        
     }
     
     required init?(coder: NSCoder) {

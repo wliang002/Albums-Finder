@@ -72,7 +72,7 @@ extension AlbumsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return albums.count
     }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "AlbumCell", for: indexPath) as! AlbumCell
         let album = albums[indexPath.row]
@@ -85,11 +85,12 @@ extension AlbumsViewController: UITableViewDataSource {
     func favoriteAlbum(_ album: Album) {
         favoriteAlbums[album.id] = album
         print(favoriteAlbums)
+        UserDefaults.standard.set(Array(favoriteAlbums.values), forKey: "favoriteAlbums")
+
     }
 }
 
 extension AlbumsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
     }
 }
